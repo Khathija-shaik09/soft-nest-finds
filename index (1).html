@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Soft Nest Finds | Shop Home, Fashion & More</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+ <a class="brand" href="#home">soft nest <span>finds</span></a>
+ <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+ <nav id="mainNav"><a href="#home">Home</a><a href="#categories">Categories</a><a href="#fashion">Fashion</a><a href="#finds">Shop</a><a href="#about">About</a></nav>
+ <button class="icon-btn" id="favToggle" aria-label="Show wishlist">♡ <span id="favCount">0</span></button>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-copy"><p class="eyebrow">A LITTLE CORNER OF GOOD FINDS</p>
+ <h1>Find your style.<br><em>Love your space.</em></h1>
+ <p class="hero-desc">Discover lovely fashion, beauty, home décor and everyday finds — compare listed prices and shop from stores you trust.</p>
+ <a class="primary" href="#finds">Explore the finds <span>↗</span></a>
+ <p class="hero-note">Home · Fashion · Beauty · Lifestyle</p></div>
+ <div class="hero-image"><img src="https://images.unsplash.com/photo-1616486029446-1f9e7e9e6e0a?auto=format&fit=crop&w=1200&q=85" alt="Cozy neutral living room"><div class="image-tag">your everyday edit ✿</div></div>
+</section>
+
+<section class="intro"><p>THE LITTLE THINGS MAKE A DIFFERENCE</p><h2>Shop what feels like you.</h2><p>From a cozy home corner to an outfit for your next plan, explore hand-picked finds in one place.</p></section>
+
+<section class="collections" id="categories">
+ <div class="section-head"><div><p class="eyebrow">EXPLORE BY CATEGORY</p><h2>What are you looking for?</h2></div></div>
+ <div class="collection-grid">
+  <a class="collection" href="#finds" data-category="Home Decor"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80" alt="Home decor"><span>Home Decor</span><small>Make it home</small></a>
+  <a class="collection" href="#fashion" data-category="Western Wear"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Fashion outfits"><span>Fashion & Dressing</span><small>Find your look</small></a>
+  <a class="collection" href="#finds" data-category="Beauty"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80" alt="Beauty products"><span>Beauty</span><small>Little self-care</small></a>
+  <a class="collection" href="#finds" data-category="Accessories"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80" alt="Accessories" onerror="this.src='https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80'"><span>Accessories</span><small>Finish the look</small></a>
+ </div>
+</section>
+
+<section class="fashion" id="fashion">
+ <div class="section-head"><div><p class="eyebrow">THE STYLE EDIT</p><h2>Dress for your mood.</h2></div><p class="muted">Choose a style to explore.</p></div>
+ <div class="style-pills">
+  <button class="style-pill active" data-style="All">All styles</button><button class="style-pill" data-style="Western Wear">Western wear</button>
+  <button class="style-pill" data-style="Ethnic Wear">Ethnic wear</button><button class="style-pill" data-style="Casual Wear">Casual wear</button>
+  <button class="style-pill" data-style="Party Wear">Party wear</button><button class="style-pill" data-style="Office Wear">Office wear</button>
+  <button class="style-pill" data-style="Footwear">Footwear</button><button class="style-pill" data-style="Bags">Bags</button>
+ </div>
+ <p class="fashion-note">Dresses · Kurtis · Sarees · Co-ord sets · Jeans · Tops · Shoes · Handbags</p>
+</section>
+
+<section class="shop" id="finds">
+ <div class="section-head"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Lovely little finds</h2></div><p class="muted" id="resultCount">Browse the collection</p></div>
+ <div class="toolbar"><input id="searchInput" type="search" placeholder="Search dresses, lamps, bags..." aria-label="Search products">
+  <select id="categoryFilter" aria-label="Filter category"><option value="All">All categories</option><option>Home Decor</option><option>Western Wear</option><option>Ethnic Wear</option><option>Casual Wear</option><option>Party Wear</option><option>Office Wear</option><option>Beauty</option><option>Accessories</option><option>Footwear</option><option>Bags</option></select>
+  <select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="name">Name A-Z</option></select>
+ </div>
+ <div class="product-grid" id="products"></div>
+</section>
+
+<section class="stores"><p class="eyebrow">SHOP ACROSS POPULAR STORES</p><h2>More stores, more choices.</h2>
+ <div class="store-list"><span>Amazon</span><span>Flipkart</span><span>Meesho</span><span>Myntra</span><span>AJIO</span><span>Nykaa</span><span>Tata CLiQ</span><span>Shopsy</span><span>Pepperfry</span></div>
+ <p class="store-disclaimer">Store options appear when a product has a valid link entered for that store. Availability and delivery charges can vary by location.</p>
+</section>
+
+<section class="quote"><p>“Style is what makes your everyday feel a little more you.”</p><span>— a soft reminder</span></section>
+<section class="about" id="about"><div><p class="eyebrow">WELCOME TO OUR LITTLE CORNER</p><h2>Good finds, thoughtfully gathered.</h2></div><p>Soft Nest Finds brings together home inspiration, fashion, beauty and lifestyle products. Compare the listed offers, check the store before buying, and choose what works for you.</p></section>
+<footer><a class="brand" href="#home">soft nest <span>finds</span></a><p>Made for lovely everyday living ♡</p>
+ <small>Some links may be affiliate links. If you shop through them, we may earn a commission at no extra cost to you. Product prices and availability can change; always confirm the final price on the retailer's website.</small>
+ <div class="footer-links"><a href="#home">Home</a><a href="#finds">Shop</a><a href="#about">About</a></div><p class="copyright">© 2026 Soft Nest Finds</p></footer>
+<script src="script.js"></script>
+</body></html>
