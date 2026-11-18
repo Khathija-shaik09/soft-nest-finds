@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f2ea">
+  <meta name="description" content="Discover thoughtfully curated fashion, ethnic wear, footwear and aesthetic home decor at Soft Nest Finds.">
+  <title>Soft Nest Finds | Fashion, Finds & Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Soft Nest Finds home">soft nest <span>finds</span></a>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#collections">Collections</a><a href="#shop">Discover</a><a href="#about">Our story</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="favToggle" aria-label="Show saved products">♡ <span id="favCount">0</span></button>
+      <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">A CURATED LITTLE WORLD</p>
+        <h1>Find pieces<br>that feel <em>like you.</em></h1>
+        <p class="hero-desc">A thoughtful edit of everyday fashion, beautiful ethnic wear, easy footwear and little details that make a home feel special.</p>
+        <a class="primary" href="#collections">Explore collections <span>↗</span></a>
+        <p class="hero-note">Good finds · Lovely details · Every budget</p>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85" alt="Warm, neutral and aesthetic living room">
+        <div class="image-tag">your everyday inspiration ✿</div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <p class="eyebrow">A LITTLE SOMETHING FOR EVERYONE</p>
+      <h2>Discover your kind of lovely.</h2>
+      <p>Browse by mood, style or budget. Open a product here, compare places to shop, and choose what works for you.</p>
+    </section>
+
+    <section class="collections section-wrap" id="collections">
+      <div class="section-head">
+        <div><p class="eyebrow">SHOP BY CATEGORY</p><h2>Explore the edit</h2></div>
+        <span class="muted">Five lovely worlds to explore</span>
+      </div>
+      <div class="collection-grid" id="categoryGrid">
+        <button class="collection" data-category="fashion"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Women's and men's fashion"><span>Fashion</span><small>Everyday style for all</small></button>
+        <button class="collection" data-category="ethnic"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85" alt="Indian ethnic fashion"><span>Ethnic wear</span><small>Tradition with a fresh feel</small></button>
+        <button class="collection" data-category="shoes"><img src="https://images.unsplash.com/photo-1543179827-6b5c7c9b6b1d?auto=format&fit=crop&w=900&q=85" alt="Fashion shoes"><span>Shoes</span><small>Steps in your style</small></button>
+        <button class="collection" data-category="slippers"><img src="https://images.unsplash.com/photo-1562273138-f46be4ebdf33?auto=format&fit=crop&w=900&q=85" alt="Sandals and slippers"><span>Slippers</span><small>Comfort, every day</small></button>
+        <button class="collection collection-wide" data-category="decor"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85" alt="Neutral aesthetic home decor"><span>Home decor</span><small>Make your space feel like you</small></button>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="shop-inner">
+        <div class="section-head shop-heading">
+          <div><p class="eyebrow">YOUR NEXT FAVOURITE FIND</p><h2 id="shopTitle">A little bit of everything</h2><p class="section-subtitle" id="shopSubtitle">Browse the full collection and discover something lovely.</p></div>
+          <button class="text-button" id="clearCategory">View all products ↗</button>
+        </div>
+
+        <div class="toolbar">
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search kurtis, sneakers, lamps..." aria-label="Search products"></label>
+          <label class="sort-box"><span>Sort by</span>
+            <select id="sortSelect" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="category-tabs" id="categoryTabs" aria-label="Product categories">
+          <button class="tab active" data-category="all">All</button>
+          <button class="tab" data-category="fashion">Fashion</button>
+          <button class="tab" data-category="ethnic">Ethnic wear</button>
+          <button class="tab" data-category="shoes">Shoes</button>
+          <button class="tab" data-category="slippers">Slippers</button>
+          <button class="tab" data-category="decor">Home decor</button>
+        </div>
+        <div class="subcategories" id="subcategoryTabs" aria-label="Subcategories"></div>
+        <div class="results-line"><span id="resultsCount">Curated finds</span><span>Prices are indicative; confirm on seller site</span></div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="editorial">
+      <div><p class="eyebrow">THE LITTLE DETAILS</p><h2>Make room for<br><em>what you love.</em></h2><p>From a kurta you reach for again and again to a vase that makes your corner feel complete.</p></div>
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85" alt="Beautiful calm neutral home interior">
+    </section>
+
+    <section class="about" id="about">
+      <p class="eyebrow">WELCOME TO SOFT NEST FINDS</p>
+      <h2>Thoughtfully found.<br><em>Lovingly shared.</em></h2>
+      <p>Soft Nest Finds brings fashion, ethnic wear, footwear and aesthetic home inspiration together in one easy-to-browse place. We help you discover options; purchases and final prices are confirmed with the seller.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#home">soft nest <span>finds</span></a>
+    <p>Find your lovely, everyday ♡</p>
+    <small>Product photos and listings are for discovery. Prices, stock, ratings and delivery details may change. Seller links open the relevant store search; exact product and affiliate links can be added when available.</small>
+    <div class="footer-links"><a href="#home">Home</a><a href="#collections">Collections</a><a href="#shop">Discover</a><a href="#about">About</a></div>
+    <p class="copyright">© 2026 Soft Nest Finds</p>
+  </footer>
+
+  <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="dialogClose" aria-label="Close product details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
